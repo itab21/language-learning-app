@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="curs" class="com.learningapp.demo.model.Curs">
+        <constructor-arg value="Engleza" />
+        <constructor-arg value="Intermediar" />
+        <!-- Adaugă aceste argumente, dacă este necesar -->
+        <constructor-arg>
+            <list/>
+        </constructor-arg>
+        <constructor-arg>
+            <list/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="utilizator1" class="com.learningapp.demo.model.Utilizator">
+        <constructor-arg value="Alex" />
+        <constructor-arg value="25" />
+        <constructor-arg value="Engleza" />
+        <constructor-arg value="50.0" />
+        <constructor-arg ref="curs" />
+    </bean>
+
+</beans>
